@@ -1,0 +1,15 @@
+while True:
+    user_input = input("Введите число: → ")
+    
+    # Проверка на команду выхода
+    if user_input.lower() == 'exit':
+        print("Выход из программы...")
+        break
+    
+    # Проверка, что введено число (может быть отрицательным)
+    if user_input.lstrip('-').isdigit():
+        # Удаляем минус для подсчета цифр
+        num_length = len(user_input.lstrip('-'))
+        print(f"В этом числе {num_length} цифры.")
+    else:
+        print("Ошибка: данные не являются числом.")
